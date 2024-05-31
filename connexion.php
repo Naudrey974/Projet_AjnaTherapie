@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <header>
+    <header> 
    
     <!--menu accueil-->
     <nav class="navbar">
@@ -47,22 +47,21 @@
     </a>
 </nav>
 </header>
-<?php include "./execution.php"?>
+<?php include "./executionForm.php"?>
 
 <!--connexion-->
-<div id="formulaire">
-  
+<div id="formulaire">  
   <div id="bgConnexion">
     <div id="connexion_utilisateur">
       <h2> CONNEXION</h2>
       <form id="formConnexion" action="" method="post">
         <div>
             <label for="mail_utilisateur">Votre adresse mail</label>
-            <input type="email" id="email" name="mail_utilisateur" placeholder="monadresse@mail.com" required>
+            <input type="email" id="email" name="mail_utilisateur" placeholder="monadresse@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
         </div>
         <div>
             <label for="password_utilisateur">Votre mot de passe</label>
-            <input type="password" id="password" name="password_utilisateur" placeholder="votre mot de passe" required>
+            <input type="password" id="password" name="password_utilisateur" placeholder="votre mot de passe" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" required>
         </div>
         <div>
             <button type="submit" name="submit1" id="refresh1">Se connecter</button>
@@ -70,27 +69,20 @@
       </form> 
       <p class="msgError">
         <?php
-            //traitement des erreurs
-            //test si $_GET["error"] existe
             if(isset($_GET["error"])){
-                switch ($_GET["error"]) {
-                    case 1:
-                        echo "Information de connexion invalide";
-                        break;
-                    case 2:
-                        echo "Information de connexion invalide MP pbm";
-                        break;
-                    case 3:
-                        echo "Veuillez remplir les champs du formulaire";
-                        break;
-                    default:
-    
-                        break;
+              switch ($_GET["error"]) {
+                case 1:
+                  echo "Informations de connexion invalides";
+                    break;
+                case 2:
+                  echo "Veuillez remplir les champs du formulaire";
+                    break;
+                default:   
+                  break;
                 }
             }
         ?>
-    </p>    
-   
+      </p>     
     </div>    
   </div>
 
@@ -109,11 +101,11 @@
       </div>
       <div>
         <label for="tel_utilisateur">Votre numéro de téléphone</label>
-        <input type="tel" id="tel" name="tel_utilisateur" placeholder="+33">
+        <input type="tel" id="tel" name="tel_utilisateur" placeholder="+33" pattern="\d{10}" required>
       </div>
       <div>
         <label for="mail_utilisateur">Votre adresse mail</label>
-        <input type="email" id="email2" name="mail_utilisateur" placeholder="monadresse@mail.com">
+        <input type="email" id="email2" name="mail_utilisateur" placeholder="monadresse@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required >
       </div>
       <div>
         <label for="password_utilisateur">Votre mot de passe</label>

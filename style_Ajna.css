@@ -58,7 +58,7 @@ header{
 }
 
 /*Navbar responsive*/
-@media screen and (max-width:700px) {
+@media screen and (max-width:992px) {
     .listMenu{
         display: none;
     }
@@ -201,7 +201,7 @@ header{
 .section > button:hover{
     background-color: #416E99;
 }
-/*Disparition de l'illustration au responsive*/
+/*Disparition de l'image */
 @media screen and (max-width:900px) {
     #illustration{
         display: none;
@@ -556,4 +556,24 @@ form button {
     font-weight: 600;
     font-family: 'Hind', 'Trebuchet MS', sans-serif;
     color: #dd371a;
+    }
+
+    /*Mise en page profile*/
+    #user-info{
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items:center;
+        padding-top: 5vw;
+        padding-bottom: 10vw;
+        
+        color: #be985f;
+        font-family:'Poppin', 'Trebuchet MS', sans-serif;
+        font-size: 2vw;
+    }
+    #user-info p{
+
+        font-family:'Julius Sans One', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 2vw;
+        color: #f0ece6; 
     }

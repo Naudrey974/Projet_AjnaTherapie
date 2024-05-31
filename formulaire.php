@@ -47,7 +47,7 @@
     </a>
 </nav>
 </header>
-<?php include "./execution.php"?>
+<?php include "./executionForm.php"?>
 <!--adresse de contact-->
 <div id="formulaire">
   <div id="bgAdresse">
@@ -98,7 +98,7 @@
         <a class="groupIcon" href="https://www.facebook.com/ajnatherapierelationaide" target="_blank"><img class="iconFooter" src="ImagesAjna/🦆 icon _facebook_.svg"></a>
       </div>
       <div id="insta">
-        <a class="groupIcon" href="#" target="_blank"><img class="iconFooter" src="ImagesAjna/🦆 icon _instagram_.svg"></a>
+        <a class="groupIcon" href="https://www.instagram.com/ajnatherapie_relationdaide/" target="_blank"><img class="iconFooter" src="ImagesAjna/🦆 icon _instagram_.svg"></a>
       </div>
       <div id="youtube">
         <a class="groupIcon" href="https://www.youtube.com/channel/UCQnNryqX1A_njq0lOpR-KbQ" target="_blank"><img class="iconFooter" src="ImagesAjna/🦆 icon _youtube_.svg"></a>

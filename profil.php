@@ -47,23 +47,23 @@
     </a>
 </nav>
 </header>
-<?php include "./execution.php"?>
+<?php include "./executionForm.php"?>
 
 
         <?php
-            //Information de l'utilisateur
-
-
             //démarrage d'une session utilisateur
             session_start();
             if(isset($_SESSION["activated"])){
-                echo '<p>"Bonjour" .$_SESSION["nom_utilisateur"]." ".$_SESSION["prenom_utilisateur"]</p>';
+              //htmlspecialchars sécurise l'affichage des noms utilisateurs
+                $nom_utilisateur =  htmlspecialchars($_SESSION["nom_utilisateur"]);
+                $prenom_utilisateur =  htmlspecialchars($_SESSION["prenom_utilisateur"]);
+            }else{
+              header("location:./connexion.php");
             }
         ?>
-    
-
-
-
+    <div id="user-info">
+      <p>Bonjour <?php echo $prenom_utilisateur . ' ' . $nom_utilisateur; ?> !</p></p>
+    </div>
 
 
 
