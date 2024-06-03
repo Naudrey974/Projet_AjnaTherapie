@@ -1,8 +1,8 @@
 
 /*Ouverture et fermeture du menu burger*/
-let sidenav = document.getElementById("mySidenav");
-let openBtn = document.getElementById("openBtn");
-let closeBtn = document.getElementById("closeBtn");
+const sidenav = document.getElementById("mySidenav");
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
 
 /* Ouvrir la navigation latérale sur 200px */
 function openNav() {

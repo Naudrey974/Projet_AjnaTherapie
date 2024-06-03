@@ -66,20 +66,20 @@
         <p>Une question, besoin d'information supplémentaire? N’hésitez pas à utiliser ce formulaire pour prendre contact avec moi !</p>
         <form action="./formulaire.php" method="post">
           <div>
-            <label for="nom_contact">Votre nom</label>
-            <input type="text" id="nom" name="nom_contact" placeholder="Dupond" required>
+            <label for="nom_expediteur">Votre nom</label>
+            <input type="text" id="nom" name="nom_expediteur" placeholder="Dupond" pattern="^[a-zA-Zà-ÿÀ-Ÿ\-'\s]+$" required>
           </div>
           <div>
-            <label for="prenom_contact">Votre prénom</label>
-            <input type="text" id="prenom" name="prenom_contact" placeholder="Julie" required>
+            <label for="prenom_expediteur">Votre prénom</label>
+            <input type="text" id="prenom" name="prenom_expediteur" placeholder="Julie" pattern="^[a-zA-Zà-ÿÀ-Ÿ\-'\s]+$" required>
           </div>
           <div>
-            <label for="mail_contact">Votre e-mail</label>
-            <input type="email" id="email" name="mail_contact" placeholder="monadresse@mail.com" required>
+            <label for="mail_expediteur">Votre e-mail</label>
+            <input type="email" id="email" name="mail_expediteur" placeholder="monadresse@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
           </div>
           <div>
-            <label for="message_contact">Votre message</label>
-            <textarea type="message" id="message" name="message_contact" placeholder="Bonjour, je vous contacte car...." required></textarea>
+            <label for="texte_message">Votre message</label>
+            <textarea type="message" id="message" name="texte_message" placeholder="Bonjour, je vous contacte car...." pattern="^[a-zA-Z0-9à-ÿÀ-Ÿ'.,;?!()\-:\s\n\r]+$" required></textarea>
           </div>
           <div>
             <button type="submit" name="submit" id="refresh">Envoyer mon message</button>
